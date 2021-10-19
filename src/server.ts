@@ -1,9 +1,12 @@
 import express from 'express';
 import routes from './router';
+import path from 'path';
 
 const app = express();
 
 app.use(routes);
+
+app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')));
 
 app.listen(3333, () => {
   console.log('Server started on PORT 3333!');
