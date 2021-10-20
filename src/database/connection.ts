@@ -1,5 +1,5 @@
 import knex from 'knex';
-import path from 'path/posix';
+import path from 'path';
 
 const connection = knex({
   client: 'sqlite3',
